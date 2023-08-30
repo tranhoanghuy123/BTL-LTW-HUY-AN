@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: auto;
+    width: 34%;
+    height: auto;
+    margin-top: 50px;
+}
+
+.field-data-container {
+    margin: 8px 0;
+}
+
+input[id],
+#user-nationality,
+#user-hobby,
+#user-gender {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgb(168, 162, 162);
+    border-radius: 4px;
+}
+
+#user-hobby>input {
+    margin-left: 4px;
+}
+
+#btn-submit {
+    width: 25%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-image: linear-gradient(rgb(77, 75, 75), rgb(235, 228, 228)80%, rgb(77, 75, 75));
+    font-weight: bold;
+}
+
+.wrong-field {
+    background-color: rgb(223, 223, 26);
+    /* border- */
+}
+
+#btn-submit:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}

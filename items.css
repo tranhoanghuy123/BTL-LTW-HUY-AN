@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+}
+
+#container {
+    margin: auto;
+    width: 30.5rem;
+    height: 25.5rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: url("images/phones/0.jpg") no-repeat center;
+    background-size: 300px 300px;
+}
+
+button {
+    margin: 11.5rem 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: pink;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#count-img {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    justify-content: center;
+}
+
+#btn-prev {
+    float: left;
+    transition: 0.6s ease;
+}
+
+#btn-next {
+    float: right;
+    transition: 0.6s ease;
+}

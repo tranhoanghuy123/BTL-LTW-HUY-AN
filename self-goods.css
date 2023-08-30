@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    /* width: 800px; */
+    width: 60%;
+    margin: auto;
+    background-color: darkkhaki;
+    font: 1.2em sans-serif;
+    margin-top: 50px;
+}
+
+table {
+    width: 100%;
+    border: 1px solid black;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 4px;
+    text-align: center;
+}
+
+.qty-phones {
+    padding: 6px;
+    width: 200px;
+    background-color: transparent;
+    border: 1px solid #817d7d;
+}
+
+.cost-phone {
+    width: 100px;
+}
+
+.name-phone {
+    width: 350px;
+}
+
+caption {
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+button {
+    width: 60px;
+    height: 25px;
+}
+
+#cart {
+    display: table;
+    /* display: contents; */
+}

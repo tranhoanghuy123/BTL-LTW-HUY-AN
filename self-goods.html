@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bán Hàng</title>
+    <link rel="stylesheet" href="self-goods.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        class Phone {
+            id
+            name
+            price
+            constructor(id, name, price) {
+                this.id = id;
+                this.name = name;
+                this.price = price;
+            }
+        }
+        var phones = [];
+        phones[0] = new Phone("0", "Iphone 6 plus", 600);
+        phones[1] = new Phone("1", "Iphone 13 pro max", 6000);
+        phones[2] = new Phone("2", "Xiaomi redmi note 12 pro", 1600);
+        phones[3] = new Phone("3", "Xiaomi redmi note 11", 300);
+        phones[4] = new Phone("4", "Samsung Galaxy A14 4G", 400);
+        phones[5] = new Phone("5", "OPPO Find N2 Flip 5G", 2600);
+        phones[6] = new Phone("6", "Samsung Galaxy A24", 3000);
+        phones[7] = new Phone("7", "Xiaomi Redmi 12C", 400);
+        phones[8] = new Phone("8", "Samsung Galaxy A34 5G", 3020);
+        phones[9] = new Phone("9", "OPPO Reno8 series", 1999);
+        phones[10] = new Phone("10", "Iphone 8 plus", 2000);
+    </script>
+</head>
+
+<body onload="showAllItem();">
+    <div class="header">
+        <h1>ASM WEB1013</h1>
+        <p>Kiến thức - Kinh nghiệm - Hỏi đáp</p>
+    </div>
+    <div class="top-nav">
+        <a href="index.html">Công nghệ</a>
+        <a href="#">Sản phẩm</a>
+        <a href="#">Số hóa</a>
+        <a href="#">Tech Award</a>
+        <a href="#" style="float: right;">Đăng nhập / Đăng ký</a>
+    </div>
+    <table id="cart" class="container">
+        <caption>
+            BÁN HÀNG<br>
+            <select name="price-item" id="price" onchange="showItemsByPrice();" style="width: 121px;">
+                <option value="0">Mức giá</option>
+                <option value="1">Dưới 1000</option>
+                <option value="2">1000-2000</option>
+                <option value="3">Trên 2000</option>
+            </select>
+            <hr style="margin: 20px auto;">
+        </caption>
+
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="tick-all" onchange="tickAllItems()"></th>
+                <th>Hàng hóa</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="row">
+                <td><input type="checkbox" class="tick" onchange="reverseState(this)"></td>
+                <td class="name-phone"></td>
+                <td class="cost-phone"></td>
+                <td><input type="number" class="qty-phones" disabled value="0" onchange="updateMoney(this); displayTotalMoney();"></td>
+                <td></td>
+            </tr>
+            <tr class="row">
+                <td><input type="checkbox" class="tick" onchange="reverseState(this)"></td>
+                <td class="name-phone"></td>
+                <td class="cost-phone"></td>
+                <td><input type="number" class="qty-phones" disabled value="0" onchange="updateMoney(this); displayTotalMoney();"></td>
+                <td></td>
+            </tr>
+            <tr class="row">
+                <td><input type="checkbox" class="tick" onchange="reverseState(this)"></td>
+                <td class="name-phone"></td>
+                <td class="cost-phone"></td>
+                <td><input type="number" class="qty-phones" disabled value="0" onchange="updateMoney(this); displayTotalMoney();"></td>
+                <td></td>
+            </tr>
+            <tr class="row">
+                <td><input type="checkbox" class="tick" onchange="reverseState(this)"></td>
+                <td class="name-phone"></td>
+                <td class="cost-phone"></td>
+                <td><input type="number" class="qty-phones" disabled value="0" onchange="updateMoney(this); displayTotalMoney();"></td>
+                <td></td>
+            </tr>
+            <tr class="row">
+                <td><input type="checkbox" class="tick" onchange="reverseState(this)"></td>
+                <td class="name-phone"></td>
+                <td class="cost-phone"></td>
+                <td><input type="number" class="qty-phones" disabled value="0" onchange="updateMoney(this); displayTotalMoney();"></td>
+                <td></td>
+            </tr>
+            <tr class="row">
+                <td><input type="checkbox" class="tick" onchange="reverseState(this)"></td>
+                <td class="name-phone"></td>
+                <td class="cost-phone"></td>
+                <td><input type="number" class="qty-phones" disabled value="0" onchange="updateMoney(this); displayTotalMoney();"></td>
+                <td></td>
+            </tr>
+            <tr class="row">
+                <td><input type="checkbox" class="tick" onchange="reverseState(this)"></td>
+                <td class="name-phone"></td>
+                <td class="cost-phone"></td>
+                <td><input type="number" class="qty-phones" disabled value="0" onchange="updateMoney(this); displayTotalMoney();"></td>
+                <td></td>
+            </tr>
+            <tr class="row">
+                <td><input type="checkbox" class="tick" onchange="reverseState(this)"></td>
+                <td class="name-phone"></td>
+                <td class="cost-phone"></td>
+                <td><input type="number" class="qty-phones" disabled value="0" onchange="updateMoney(this); displayTotalMoney();"></td>
+                <td></td>
+            </tr>
+            <tr class="row">
+                <td><input type="checkbox" class="tick" onchange="reverseState(this)"></td>
+                <td class="name-phone"></td>
+                <td class="cost-phone"></td>
+                <td><input type="number" class="qty-phones" disabled value="0" onchange="updateMoney(this); displayTotalMoney();"></td>
+                <td></td>
+            </tr>
+            <tr class="row">
+                <td><input type="checkbox" class="tick" onchange="reverseState(this)"></td>
+                <td class="name-phone"></td>
+                <td class="cost-phone"></td>
+                <td><input type="number" class="qty-phones" disabled value="0" onchange="updateMoney(this); displayTotalMoney();"></td>
+                <td></td>
+            </tr>
+            <tr id="total-money">
+                <td colspan="4">TỔNG</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        let nameOfPhones = document.getElementsByClassName("name-phone");
+        let costOfPhones = document.getElementsByClassName("cost-phone");
+
+        function showItem(phone, position) {
+            nameOfPhones[position].innerText = phone.name;
+            nameOfPhones[position].value = phone.name;
+            nameOfPhones[position].parentElement.style.display = "table-row";
+            costOfPhones[position].value = phone.price;
+            costOfPhones[position].innerText = phone.price;
+            nameOfPhones[position].parentElement.style.display = "table-row";
+        }
+
+        function showAllItem() {
+            let index = 0;
+            for (let phone of phones) {
+                showItem(phone, index);
+                index++;
+            }
+        }
+
+        function hiddenEmptyItem(name) {
+            for (let namePhone of nameOfPhones) {
+                if (namePhone.value == name) {
+                    namePhone.parentElement.style.display = "none";
+                }
+            }
+
+        }
+        // 2 biến minValue và maxValue nhận 2 giá trị đầu vào là giá trị chặn trên và dưới để lọc ra
+        function filterItems(minValue, maxValue) {
+            let index = 0;
+            for (let phone of phones) {
+                if (!(phone.price >= minValue && phone.price < maxValue)) {
+                    hiddenEmptyItem(phone.name);
+                }
+            }
+        }
+
+        function showItemsByPrice() {
+
+            const phonesSelected = document.getElementById("price");
+            switch (parseInt(phonesSelected.value)) {
+                case 1:
+                    filterItems(0, 1000);
+                    break;
+                case 2:
+                    filterItems(1000, 2001);
+                    break;
+                case 3:
+                    filterItems(2001, 999999999);
+                    break;
+                default:
+                    showAllItem();
+                    break;
+            }
+        }
+
+        function tickAllItems() {
+            let items = document.querySelectorAll(".tick");
+            let tickAll = document.getElementById("tick-all");
+            if (!tickAll.checked) {
+                return;
+            }
+            for (let i = 0; i < items.length; i++) {
+                console.log(items[i]);
+                if (items[i].checked) continue;
+                items[i].checked = true;
+                reverseState(items[i]);
+            }
+        }
+
+        function updateMoney(obj) {
+            let row = obj.parentElement.parentElement;
+            let money = row.getElementsByTagName("td")[4]; // lấy tag ở cột thành tiền tương ứng
+            let cost = parseInt(row.getElementsByTagName("td")[2].value);
+            money.innerText = parseInt(row.getElementsByTagName("input")[1].value) * cost; // tính toán và show thành tiền lên
+        }
+
+        function displayTotalMoney() {
+            let row = document.getElementById("total-money");
+            let cellTotalMoney = row.getElementsByTagName("td")[1];
+            cellTotalMoney.innerText = calTotalMoney();
+        }
+
+        function calTotalMoney() {
+            let cart = document.getElementById("cart");
+            let row = cart.getElementsByTagName("tr");
+            let totalMoney = 0;
+            for (let i = 1; i < row.length - 1; i++) {
+                let price = parseInt(row[i].children[4].innerText);
+                if (!isNaN(price)) {
+                    totalMoney += price;
+                }
+            }
+
+            return totalMoney;
+        }
+
+        function reverseState(obj) {
+            let row = obj.parentElement.parentElement;
+            let btn = row.getElementsByTagName("input")[1];
+            btn.disabled = !btn.disabled;
+
+        }
+    </script>
+</body>
+
+</html>
